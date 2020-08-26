@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Hello World",
+    "description": "Basic Extension for Chrome",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["main.js"]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Hello World"
+    },
+    "background": {
+        "page": "background.html"
+    },
+    "permissions": [
+        "background",
+        "activeTab"
+    ]
+}
